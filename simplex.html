@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">           
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/custom.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/simplex.js"></script>
+        <title>Решение линейных задач симплекс–методом</title>
+    </head>
+    <body>
+        <div id='simplex' class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#a" data-toggle="collapse">Выбор начальных параметров</a>
+                </div>
+                <div id="a" class="collapse in">
+                    <div class="panel-body">
+                        <form class="form-inline" role="form">
+                            <div class="form-group">
+                                <label class="control-label" for="variables">Кол-во переменных:</label>                
+                                <select class="form-control" id="variables" >
+                                    <option>1</option>
+                                    <option selected >2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="restrictions">Кол-во ограничений:</label>       
+                                <select class="form-control" id="restrictions">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option selected>3</option>
+                                    <option>4</option>
+                                </select> 
+                            </div>         
+                        </form>  
+                    </div>
+                    <input type='button' class="btn btn-info btn-block" value='Выбрать' onClick="CreateEnterTable()"> 
+                </div>       
+            </div>           
+        </div>        
+    </body>
+</html>
