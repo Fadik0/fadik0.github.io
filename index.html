@@ -8,11 +8,23 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        <div class="container">
-            <h2>Methods of linear programming!</h2>
-            <a href="/graphical.html" class="btn btn-info" role="button">Graphical</a>
-            <a href="/simplex.html" class="btn btn-info" role="button">Simplex</a>
+    <body> 
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Methods of linear programming!</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./simplex.html">Симплекс-Метод</a></li>
+                    <li><a href="./graphical.html">Графический метод</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <div id='simplex' class="container-fluid">                  
         </div>
+        <script src="./js/simplex.js"></script>
     </body>
 </html>

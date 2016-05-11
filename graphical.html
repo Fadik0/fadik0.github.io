@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="http://d3js.org/d3.v3.min.js"> </script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
         <style>
             .axis path, .axis line {
                 fill: none;
@@ -21,7 +21,21 @@
         </style>
     </head>
     <body>
-        <div id="graphical" class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Methods of linear programming!</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="./simplex.html">Симплекс-Метод</a></li>
+                    <li class="active"><a href="./graphical.html">Графический метод</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>   
+        <div id="graphical" class="container-fluid">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a href="#a" data-toggle="collapse">Выбор начальных параметров</a>
@@ -54,11 +68,7 @@
                 </div>       
             </div>
         </div>       
-        <script type="text/javascript">
-            
-            
-            
-            
+        <script type="text/javascript">         
             var height = 600, 
                 width = 600, 
                 margin=30;
