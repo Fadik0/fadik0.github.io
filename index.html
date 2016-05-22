@@ -3,28 +3,43 @@
     <head>
         <title>Methods of linear programming!</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        
     </head>
     <body> 
         <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
+            <div class="container-fluid">      
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Methods of linear programming!</a>
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                  </button>
+                  <a class="navbar-brand" href="#">Methods of linear programming!</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="./simplex.html">Симплекс-Метод</a></li>
-                    <li><a href="./graphical.html">Графический метод</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">                             
+                    <li><a href="#" onclick="newSimplex();">Симплекс-Метод</a></li>
+                    <li><a href="#" onclick="newGraphical();">Графический метод</a></li>
+                  </ul>
+                </div>                
             </div>
         </nav>
         <br>
         <br>
         <br>
-        <div id='simplex' class="container-fluid">                  
+        <div id='mlr'>                  
         </div>
         <script src="./js/simplex.js"></script>
+        <script src="./js/graphical.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
+                //newSimplex();
+                newGraphical();
+            });
+        </script>
     </body>
 </html>

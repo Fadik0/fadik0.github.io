@@ -25,8 +25,25 @@ function randomInteger(min, max) {
     return rand;
 }
 
+function createButton(title, func){
+    var button = document.createElement('input');
+    button.className = 'btn btn-info btn-block';
+    button.setAttribute('type', 'button');
+    button.setAttribute('value', title);
+    button.setAttribute('onClick', func);   
+    return button;
+}
+
+function createTextBox(id){
+    var textBox = document.createElement('input');
+    textBox.className = 'form-control input-sm';
+    textBox.setAttribute('type', 'text');
+    textBox.setAttribute('id', id);
+    return textBox;
+}
+
 //Создание панели 
-function CreatePanel(panel_title, body_id, button_title, button_func){
+function createPanel(panel_title, body_id, button_title, button_func){
     var spoiler_id = randomInteger(0, 100);  
     var panel = document.createElement('div');
     panel.className = 'panel panel-default';    
@@ -45,12 +62,8 @@ function CreatePanel(panel_title, body_id, button_title, button_func){
     pbody.className = 'panel-body';
     pbody.setAttribute('id', body_id); 
     spoiler.appendChild(pbody);
-    var input = document.createElement('input');
-    input.className = 'btn btn-info btn-block';
-    input.setAttribute('type', 'button');
-    input.setAttribute('value', button_title);
-    input.setAttribute('onClick', button_func);
-    spoiler.appendChild(input);
+    var btn = createButton(button_title, button_func);
+    spoiler.appendChild(btn);
     panel.appendChild(spoiler);  
     document.getElementById('simplex').appendChild(panel);
 }
@@ -61,67 +74,60 @@ function AddInitialTable(body_id) {
     data.innerHTML = '';
     var well = document.createElement('div');
     well.className = 'well well-sm';
-    well.textContent = 'Функции цели F(x)';
-    data.appendChild(well);  
-    for (var i = 1; i <= restrictions; i++) {
-        var form = document.createElement('form');
-        form.className = 'form-inline';
-        form.setAttribute('role', 'form');        
-        for (var j = 1; j <= variables; j++) {
-            var div = document.createElement('div');
-            div.className = 'form-group';
-            var label = document.createElement('label');
-            label.setAttribute('for', 'x' + i + j);
-            label.textContent = 'x' + i;
-            div.appendChild(label);
-            var input = document.createElement('input');
-            input.className = 'form-control';
-            input.setAttribute('type', 'text');
-            input.setAttribute('id', 'x' + i + j);
-            input.setAttribute('placeholder', 'x' + j);
-            div.appendChild(input);
-            form.appendChild(div);
-        }        
-        var div = document.createElement('div');
-        div.className = 'form-group';
-        var label = document.createElement('label');
-        label.setAttribute('for', 's' + i);
-        label.textContent = '≤';
-        div.appendChild(label);
-        var input = document.createElement('input');
-        input.className = 'form-control';
-        input.setAttribute('type', 'text');
-        input.setAttribute('id', 's' + i);
-        input.setAttribute('placeholder', '≤');
-        div.appendChild(input);
-        form.appendChild(div);      
-        data.appendChild(form);
-        data.appendChild(document.createElement('br'));
-    }   
+    well.textContent = 'Первые ' + restrictions + ' строки это система уравнений ограничений, последняя строка целевая функция.';
+    data.appendChild(well); 
+    
+    //Добавляем заголовки столбцов 
+    var tr = document.createElement('tr');
+    var th = document.createElement('th');           
+    for (var i = 1; i <= variables; i++) {
+        th = document.createElement('th');
+        th.textContent = 'x' + i;
+        tr.appendChild(th);
+    }          
+    th = document.createElement('th');
+    th.textContent = 'Ограничение';
+    tr.appendChild(th);  
+    var thead = document.createElement('thead');
+    thead.appendChild(tr);   
       
-    well = document.createElement('div');
-    well.className = 'well well-sm';
-    well.textContent = 'Функции цели F(x)';
-    data.appendChild(well);     
-    var form = document.createElement('form');
-    form.className = 'form-inline';
-    form.setAttribute('role', 'form');
-    for (var i = 1; i <= variables; i++) {                       
-        var div = document.createElement('div');
-        div.className = 'form-group';
-        var label = document.createElement('label');
-        label.setAttribute('for', 'f' + i);
-        label.textContent = 'x' + i;
-        div.appendChild(label);    
-        var input = document.createElement('input');
-        input.className = 'form-control';
-        input.setAttribute('type', 'text');
-        input.setAttribute('id', 'f' + i);
-        input.setAttribute('placeholder', 'x' + i);
-        div.appendChild(input);
-        form.appendChild(div);
+    //Добавляем значения строками 
+    var tbody = document.createElement('tbody');   
+    for (var i = 1; i <= restrictions; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 1; j <= variables; j++) {
+            var td = document.createElement('td');
+            var tBox = createTextBox('x' + i + j);
+            td.appendChild(tBox);
+            tr.appendChild(td);
+        }
+        var td = document.createElement('td');
+        var tBox = createTextBox('r' + i);
+        td.appendChild(tBox);
+        tr.appendChild(td);
+        tbody.appendChild(tr);
     }
-    data.appendChild(form);
+    var tr = document.createElement('tr'); 
+    for (var i = 1; i <= variables; i++) {           
+        var td = document.createElement('td');
+        var tBox = createTextBox('f' + i);
+        td.appendChild(tBox);     
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+    }
+    
+    //Добвляем заголовок и данные
+    var table = document.createElement('table');
+    table.className = 'table table-condensed table-striped';
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    
+    var div = document.createElement('div');
+    div.className = 'table-responsive';
+    div.appendChild(table);
+    
+    var data = document.getElementById(body_id);
+    data.appendChild(div);
 }
 
 //Добавление текущей таблицы решения
@@ -187,18 +193,19 @@ function AddСurrentTable(body_id) {
 //Добавление полей для ввода начальных параметров
 function AddInitialParametrs(body_id){
     var form = document.createElement('form');
-    form.className = 'form-inline';
+    form.className = 'form';
     form.setAttribute('role', 'form');        
     var div = document.createElement('div');
-    div.className = 'form-group';
+    div.className = 'col-xs-3';
     var label = document.createElement('label');
     label.setAttribute('for', 'restrictions');
     label.textContent = 'Кол-во ограничений:';
+    label.className = 'control-label';
     div.appendChild(label);
     var select = document.createElement('select');
-    select.className = 'form-control';
+    select.className = 'form-control input-sm';
     select.setAttribute('id', 'restrictions');
-    for (var i = 1; i <= 4; i++) {
+    for (var i = 2; i <= 5; i++) {
         var option = document.createElement('option');
         option.textContent = i;
         select.appendChild(option);
@@ -207,15 +214,15 @@ function AddInitialParametrs(body_id){
     form.appendChild(div);
     
     div = document.createElement('div');
-    div.className = 'form-group';
+    div.className = 'col-xs-3';
     var label = document.createElement('label');
     label.setAttribute('for', 'variables');
     label.textContent = 'Кол-во переменных:';
     div.appendChild(label);
     var select = document.createElement('select');
-    select.className = 'form-control';
+    select.className = 'form-control input-sm';
     select.setAttribute('id', 'variables');
-    for (var i = 1; i <= 4; i++) {
+    for (var i = 2; i <= 5; i++) {
         var option = document.createElement('option');
         option.textContent = i;
         select.appendChild(option);
@@ -230,20 +237,18 @@ function AddInitialParametrs(body_id){
 //Создание начальной матрицы
 function CreateMatrix() {
     //Создаем матрицу и заполняем 0
-    var a = [];
+    var bmatrix = [];
     for (var i = 0; i <= restrictions; i++) {
         var b = [];
         for (var j = 0; j <= variables + restrictions; j++) {
             b.push(0);
         }
-        a.push(b);     
+        bmatrix.push(b);     
     }
-    bmatrix = $.extend(true, [], a); 
-    
     //Получаем данные и записываем в матрицу
     for (var i = 0; i < restrictions; i++) {
         var num = 0;
-        var id = 's' + (i + 1);     
+        var id = 'r' + (i + 1);     
         num = +document.getElementById(id).value;
         bmatrix[i][0] = num;
         for (var j = 1; j <= variables; j++) {
@@ -257,9 +262,7 @@ function CreateMatrix() {
             else
                 bmatrix[i][k + 1 + variables] = 0;
         }        
-    }
-    
-    //bmatrix[restrictions][0] = 0;
+    }    
     for (var i = 1; i <= variables; i++) {
         var num = 0;
         var id = 'f' + i;
@@ -327,7 +330,7 @@ function getColumn(){
 
 function a(){
     if (document.getElementById('b') == null)
-        CreatePanel('Выбор начальных параметров', 'b', 'Next', 'b()')
+        createPanel('Выбор начальных параметров', 'b', 'Next', 'b()')
     else
         document.getElementById('b').innerHTML = '';   
     GetEnterData();
@@ -336,7 +339,7 @@ function a(){
 
 function b(){
     if (document.getElementById('c') == null)
-        CreatePanel('Выбор начальных параметров', 'c', 'Next', 'c()')
+        createPanel('Выбор начальных параметров', 'c', 'Next', 'c()')
     else
         document.getElementById('c').innerHTML = '';  
     CreateMatrix();
@@ -352,7 +355,12 @@ function c(){
     AddСurrentTable('c');
 }
 
-document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
-    CreatePanel('Выбор начальных параметров', 'a', 'Next', 'a()');
+function newSimplex(){
+    document.getElementById('mlr').innerHTML = '';
+    var simplex = document.createElement('div');
+    simplex.className = 'container-fluid';
+    simplex.setAttribute('id','simplex');
+    document.getElementById('mlr').appendChild(simplex);
+    createPanel('Выбор начальных параметров', 'a', 'Next', 'a()');
     AddInitialParametrs('a');
-});
+}
