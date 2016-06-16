@@ -271,7 +271,7 @@ function createSelectBox(text, id, min, max){
     var selectBox = document.createElement('div');
     selectBox.className = 'form-group';
     var label = document.createElement('label');
-    label.setAttribute('for', 'restrictions');
+    label.setAttribute('for',  id);
     label.textContent = text;
     selectBox.appendChild(label);
     var select = document.createElement('select');
