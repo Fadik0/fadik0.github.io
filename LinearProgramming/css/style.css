@@ -1,3 +1,17 @@
 #lp-main {
     margin-top: 70px;
 }
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #333;
+}
+
+.axis .grid-line {
+    stroke: #000;
+    stroke-opacity: 0.2;
+}
+
+.axis text {
+    font: 10px Verdana;
+}
