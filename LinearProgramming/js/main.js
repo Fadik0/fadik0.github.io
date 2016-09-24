@@ -536,7 +536,7 @@ function nextStepGraphical() {
             simplex.setRestrictions(+document.getElementById("restrictions").value); 
             var panel = createPanel('Выбор данных решения', step);
             main.appendChild(panel);
-            var box = document.getElementById(step);            
+            var box = document.getElementById(step);         
             addInitialTableSimplex(step);
             var btn = createButton('Далее', 'nextStepGraphical()');
             panel.appendChild(btn);
@@ -560,7 +560,11 @@ function nextStepGraphical() {
                         simplex.matrix[i][k + 1 + simplex.variables] = 0;
                 }        
             }
-                   
+            graphical.createSVG();
+            graphical.createToolTip();
+            graphical.createXY();
+            graphical.createLine();
+            graphical.createLine();       
             break;                                                   
         default:
             alert(step);
