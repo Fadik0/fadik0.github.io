@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title>Main</title>
+		<link type="text/css" rel="stylesheet" href="css/main-style.css" />
+		<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.qtip.css" />	
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="js/lightbox.min.js"></script>
+		<script type="text/javascript" src="js/jquery.qtip.js"></script>
+		<script type="text/javascript" src="js/jquery.imagesloaded.pkg.min.js"></script>		
+		<script type="text/javascript">		
+		$(document).ready(function()
+		{				
+			$(".menu-item").click(function(){
+				<!-- $(".page").empty(); -->
+				
+				$("#next").attr('page', $(this).attr('next'));
+				$("#prev").attr('page', $(this).attr('prev'));
+					
+				$('.menu-item-active').removeClass('menu-item-active').addClass('menu-item');
+				$(this).removeClass('menu-item').addClass('menu-item-active');
+													
+				var page = $(this).attr("page");			
+				$(".page").load("pages/"+page, function() {
+					$('a[termin]').each(function() {
+					$(this).qtip({
+						content: {
+							text: function(event, api) {
+								var data = $(this).attr('termin');
+								var result = "<iframe src='glossary/" + data +".html' width='100%' height='100%' frameborder='0'></iframe>";
+								return result;
+							},					
+							title:  function(event, api) {
+								var data = $(this).attr('title');													
+								return data;
+							},
+							button: 'Close',
+						},	
+						position: {
+							my: 'top right',  
+							at: 'bottom left', 				
+						},
+						style: {
+							classes: 'qtip-bootstrap',
+							width: 300,
+							tip: false,
+						},
+						show: 'click',
+						hide: 'click'							
+					});			
+					});	
+					
+					$('a[glossary]').each(function() {
+						$(this).load("glossary/"+$(this).attr("glossary"));
+					});	
+				});				
+			});	
+
+			$(".menu-foo").click(function(){
+				var page = $(this).attr("page");
+							
+				$("#next").attr('page', '');
+				$("#prev").attr('page', '');
+				
+				$("#next").attr('page', $('a[page = "' + page + '"]').attr('next'));
+				$("#prev").attr('page', $('a[page = "' + page + '"]').attr('prev'));
+					
+				$('.menu-item-active').removeClass('menu-item-active').addClass('menu-item');
+				$('[page = "' + page + '"]').removeClass('menu-item').addClass('menu-item-active');
+																
+				$(".page").load("pages/"+page, function() {
+					$('a[termin]').each(function() {
+					$(this).qtip({
+						content: {
+							text: function(event, api) {
+								var data = $(this).attr('termin');
+								var result = "<iframe src='glossary/" + data +".html' width='100%' height='100%' frameborder='0'></iframe>";
+								return result;
+							},					
+							title:  function(event, api) {
+								var data = $(this).attr('title');													
+								return data;
+							},
+							button: 'Close',
+						},	
+						position: {
+							my: 'top right',
+							at: 'bottom left', 								
+						},
+						style: {
+							classes: 'qtip-bootstrap',
+							width: 300,
+							tip: false,
+						},
+						show: 'click',
+						hide: 'click'							
+					});			
+					});
+
+					$('a[glossary]').each(function() {
+						$(this).load("glossary/"+$(this).attr("glossary"));
+					});	
+				});	
+			});
+		});					
+		</script>
+		<div class="header">			
+			<div class="menu">
+				<p><a class="title" href="index.html">Введение в HTML5</a></p>	
+			</div>
+		</div>			
+		<div class="content">
+			<div class="sidebar">
+				<p><a class="menu-item-active" page="title.html" prev="glossary.html" next="help.html" hidden="true">Главная</a></p>	
+				<p><a class="menu-item" page="help.html" prev="title.html" next="intro.html">Инструкция по использованию</a></p>				
+				<p><a class="menu-item" page="intro.html" prev="help.html" next="1.0.html">Введение</a></p>								
+				<details open="open">
+					<summary><a class="menu-item" page="1.0.html" prev="help.html" next="1.1.html">1. Основы синтаксиса HTML5</a></summary>				
+					<p><a class="menu-item" page="1.1.html" prev="1.0.html" next="1.2.html">1.1 Объявление DOCTYPE</a></p>
+					<p><a class="menu-item" page="1.2.html" prev="1.1.html" next="1.3.html">1.2 Определение кодировки</a></p>
+					<p><a class="menu-item" page="1.3.html" prev="1.2.html" next="1.4.html">1.3 Определение языка</a></p>
+					<p><a class="menu-item" page="1.4.html" prev="1.3.html" next="1.5.html">1.4 Оптимизация script и link</a></p>
+					<p><a class="menu-item" page="1.5.html" prev="1.4.html" next="1.6.html">1.5 Выделение текста</a></p>	
+					<p><a class="menu-item" page="1.6.html" prev="1.5.html" next="1.7.html">1.6 Элементы article и section</a></p>	
+					<p><a class="menu-item" page="1.7.html" prev="1.6.html" next="1.8.html">1.7 Придание тексту значимости</a></p>	
+					<p><a class="menu-item" page="1.8.html" prev="1.7.html" next="1.9.html">1.8 Определение аббревиатур</a></p>	
+					<p><a class="menu-item" page="1.9.html" prev="1.8.html" next="1.10.html">1.9 Разметка подписей</a></p>	
+					<p><a class="menu-item" page="1.10.html" prev="1.9.html" next="test.html">1.10 Временное скрытие</a></p>	
+					<p><a class="menu-item" page="test.html" prev="1.10.html" next="2.0.html">Тест по главе 1</a></p>
+				</details>
+				<p><a class="menu-item" page="2.0.html" prev="test.html" next="3.0.html">2. Передовые методы разметки</a></p>
+				<p><a class="menu-item" page="3.0.html" prev="2.0.html" next="glossary.html">3. Формы</a></p>
+				<p><a class="menu-item" page="glossary.html" prev="3.0.html" next="title.html">Глоссарий</a></p>
+			</div>
+			<div class="main-content">
+				<div class="data">
+					<div class="page">
+						<p style= "text-align: center;">
+							<img src="img/title.png" alt="Введение в HTML5"/>						
+						</p>
+						<p style= "text-align: center;">
+							Электронный учебник. Разработчик: Базылев А.К.
+						</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="footer">
+			<div class="about">
+				<a class="menu-foo" id="prev" page="glossary.html"><img src="img/prev.png" alt="prev" style= "height: 30px; margin: 5px;"/></a>				
+				<a class="menu-foo" id="next" page="help.html"><img src="img/next.png" alt="next" style= "height: 30px; margin: 5px; margin-left: 420px;" /></a>
+			</div>
+		</div>
+	</body>
+</html>

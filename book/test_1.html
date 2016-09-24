@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<title></title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jQuizler.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/jQuizler.css" />
+
+<script type="text/javascript">
+var questions = [
+    {
+        type: "choose",
+        question: "<h3>Какой формат определения DOCTYPE поддерживат HTML5?</h3>",
+        answers: [
+            '&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt',
+            '&lt;!DOCTYPE HTML>',
+            '&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt',
+			'Все предложенные форматы',
+        ],
+        correct: [4]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какой вариант определения кодировки неверный?</h3>",
+        answers: [
+            '&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/&gt',
+            '&lt;meta charset=UTF-8"/&gt',
+            '&lt;meta http-equiv="Content-Type" content="text/html;"/&gt',
+			'Все варианты верные'
+        ],
+        correct: [3]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какой вариант определения языка используется HTML5?</h3>",
+        answers: [
+            '&lt;html lang="en" dir="ltr" class="client-nojs" xmlns="http://www.w3.org/1999/xhtml"&gt',
+            '&lt;html lang="en"&gt',
+            '&lt;html lang="en" dir="ltr""&gt',
+			'Все предложенные варианты',
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какой формат определения script и link поддерживат HTML5?</h3>",
+        answers: [
+            '&lt;link type="text/css" rel="stylesheet" href="css/jquery.qtip.css" /&gt',
+			'&lt;script type="text/javascript" src="js/jquery-1.11.0.min.js"&gt',
+            '&lt;link rel="stylesheet" href="css/lightbox.css" /&gt',
+            '&lt;script src="js/jquery.qtip.js"&gt',
+			'Все предложенные форматы',
+        ],
+        correct: [5]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое утверждение неверное?</h3>",
+        answers: [
+            "Элемент i больше не считается презентационным",
+            "Элемент em обозначает текст, который необходимо выделить при произношении",
+            "Элемент i можно использовать для дополнительного выделения слов, например технических терминов, мыслей",
+			"Браузеры теперь не отображают i курсивом",
+			"Все утверждения верные"
+        ],
+        correct: [4]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое утверждение неверное?</h3>",
+        answers: [
+            "Элемент article можно использовать для видео, новостных статей, комментариев к блогу",
+            "Элемент section не прменяется, если для содержимого лучше подходит header, footer, aside или article",
+            "Элемент section не используется, когда в содержимом нет естественного заголовка",
+			"Элемент article предназначен для контента, самостоятельно существующего за пределами окружающей информации",
+			"Все утверждения верные"
+        ],
+        correct: [5]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое утверждение верное?</h3>",
+        answers: [
+            "Элемент b не используется для стилистического выделения текста без передачи дополнительного значения в HTML5",
+            "Элемент strong применялся для акцентирования текста в HTML5",
+            "Элемент b считается презентационным в HTML5",
+			"Элементы strong и b браузеры одинаково отображают полужирным шрифтом",
+			"Все утверждения неверные"
+        ],
+        correct: [4]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое утверждение верное?</h3>",
+        answers: [
+            "В HTML5 для аббревиатур используются два элемента: abbr и acronym",
+            "Элемент acronym полностью убрали из спецификации HTML5",
+			"Элемент abbr полностью убрали из спецификации HTML5",
+			"Не все сокращения это урезанные формы слов или фраз, то есть те же самые аббревиатуры",
+			"Все утверждения неверные"			
+        ],
+        correct: [2]
+    },
+	{
+        type: "choose",
+        question: "<h3>Какое утверждение неверное?</h3>",
+        answers: [
+            "Элемент figure можно использовать с фотографиями, графиками, аудио",
+			"Элемент figcaption может находиться в любом месте в пределах figure",
+            "Изображения могут использоваться не только с figure",		
+			"Элемент figcaption необязательный",
+			"Все утверждения верные"
+        ],
+        correct: [5]
+    },
+];
+
+$("document").ready(function(){
+    $("#jQuizler").jQuizler(questions);
+});
+
+</script>
+</head>
+
+<body>
+    <div id="jQuizler" class="main-quiz-holder">
+        <h3>Контрольный тест к главе 1</h3>
+        <button class="btn btn-large">Начать тест</button>
+    </div>
+</body>
+</html>
