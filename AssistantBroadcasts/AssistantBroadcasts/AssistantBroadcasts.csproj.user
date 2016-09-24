@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://node0.net2ftp.ru/public_http/AssistantBroadcasts/|ftp://node0.net2ftp.ru/public_http/Assistant Broadcasts/|ftp://node0.net2ftp.ru/public_http/AB/|ftp://node0.net2ftp.ru/public_http/GGB/|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://net2ftp.ru/node0/noip42%40gmail.com/AssistantBroadcasts/|http://net2ftp.ru/node0/noip42%40gmail.com/Assistant Broadcasts/|http://net2ftp.ru/node0/noip42%40gmail.com/GGB/|https://webdav.yandex.ru/|https://googledrive.com/host/0B_-i7pWJQ8jAYk5kMElCa0VWVms/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://net2ftp.ru/node0/noip42%40gmail.com/AssistantBroadcasts/|http://net2ftp.ru/node0/noip42%40gmail.com/GGB/|\\localhost\Users\Public\|http://gg-dev.do.am/GoodGame_Chat_Bot/|https://drive.google.com/drive/folders/0B_-i7pWJQ8jATC0xZ3poNmlLN1U/</UpdateUrlHistory>
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>ru-RU</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

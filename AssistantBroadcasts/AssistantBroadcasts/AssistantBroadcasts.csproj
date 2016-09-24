@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16BE8283-151F-4254-B2E2-2453F252026E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssistantBroadcasts</RootNamespace>
+    <AssemblyName>AssistantBroadcasts</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://node0.net2ftp.ru/public_http/AssistantBroadcasts/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://net2ftp.ru/node0/noip42%40gmail.com/AssistantBroadcasts/</InstallUrl>
+    <UpdateUrl>http://net2ftp.ru/node0/noip42%40gmail.com/AssistantBroadcasts/</UpdateUrl>
+    <ProductName>Assistant Broadcasts</ProductName>
+    <PublisherName>Fadiko</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>0.3.1.1</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>DCB17B1804EAD684E6DF7BA6600F2EF0A6BFC4D9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GGB_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GGB_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="policy.2.0.taglib-sharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\policy.2.0.taglib-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp, Version=2.1.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\taglib.2.1.0.0\lib\taglib-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="websocket-sharp, Version=1.0.2.36589, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp.1.0.3-rc9\lib\websocket-sharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional_Classes.cs" />
+    <Compile Include="Form_Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Browser.Designer.cs">
+      <DependentUpon>Form_Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Key.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Key.Designer.cs">
+      <DependentUpon>Form_Key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Label.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Label.Designer.cs">
+      <DependentUpon>Form_Label.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Logs.Designer.cs">
+      <DependentUpon>Form_Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Command.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Command.Designer.cs">
+      <DependentUpon>Form_Command.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Notification.Designer.cs">
+      <DependentUpon>Form_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Now.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Now.Designer.cs">
+      <DependentUpon>Form_Now.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Quest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Quest.Designer.cs">
+      <DependentUpon>Form_Quest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Settings.Designer.cs">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Browser.resx">
+      <DependentUpon>Form_Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Key.resx">
+      <DependentUpon>Form_Key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Label.resx">
+      <DependentUpon>Form_Label.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Logs.resx">
+      <DependentUpon>Form_Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Command.resx">
+      <DependentUpon>Form_Command.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Notification.resx">
+      <DependentUpon>Form_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Now.resx">
+      <DependentUpon>Form_Now.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Quest.resx">
+      <DependentUpon>Form_Quest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Settings.resx">
+      <DependentUpon>Form_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+    <None Include="GGB_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patches.txt" />
+    <None Include="Resources\citations.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 с пакетом обновления 1 %28SP1%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_translate_black_36dp.png" />
+    <None Include="Resources\ic_arrow_upward_black_36dp.png" />
+    <None Include="Resources\ic_arrow_downward_black_36dp.png" />
+    <None Include="Resources\twitch_favorite.html" />
+    <None Include="Resources\id_channel_vidi.jpg" />
+    <None Include="Resources\goodgame-games.html" />
+    <None Include="Resources\goodgame-favorite.html" />
+    <None Include="Resources\twitch-now.html" />
+    <None Include="Resources\twitch-games.html" />
+    <None Include="Resources\goodgame-now.html" />
+    <None Include="Resources\ic_casino_black_18dp.png" />
+    <None Include="Resources\ic_favorite_goodgame_48dp.png" />
+    <None Include="Resources\ic_star_twitch_48dp.png" />
+    <None Include="Resources\ic_star_goodgame_48dp.png" />
+    <None Include="Resources\ic_videogame_asset_twitch_48dp.png" />
+    <None Include="Resources\ic_videogame_asset_goodgame_48dp.png" />
+    <None Include="Resources\ic_favorite_twitch_48dp.png" />
+    <None Include="Resources\ic_info_outline_white_36dp.png" />
+    <None Include="Resources\ic_refresh_white_36dp.png" />
+    <None Include="Resources\ic_close_white_36dp.png" />
+    <None Include="Resources\ic_launch_white_36dp.png" />
+    <None Include="Resources\ic_exit_to_app_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ic_app.ico" />
+    <None Include="Resources\ic_description_black_36dp.png" />
+    <None Include="Resources\help_labels.txt" />
+    <None Include="Resources\help_commands.txt" />
+    <None Include="Resources\help_quests.txt" />
+    <None Include="Resources\twitch_code.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

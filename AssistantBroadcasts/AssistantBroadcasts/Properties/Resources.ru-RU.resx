@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value>Добавить</value>
+    <comment>main</comment>
+  </data>
+  <data name="ban_user" xml:space="preserve">
+    <value>Забанить пользователя</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Отменить</value>
+    <comment>app</comment>
+  </data>
+  <data name="default_" xml:space="preserve">
+    <value>По умолчанию</value>
+    <comment>app</comment>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Удалить</value>
+    <comment>main</comment>
+  </data>
+  <data name="del_message" xml:space="preserve">
+    <value>Удалить сообщение</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_cmd" xml:space="preserve">
+    <value>Текст в команде !help</value>
+    <comment>settings</comment>
+  </data>
+  <data name="help_regex_net" xml:space="preserve">
+    <value>Регулярные выражения в .NET Framework
+Шаблон регулярного выражения (Mr\.? |Mrs\.? |Miss |Ms\.? ) 
+сопоставляет все вхождения строк "Mr ", "Mr. " , "Mrs ", "Mrs. " , "Miss ", "Ms или "Ms. " .</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_response" xml:space="preserve">
+    <value>Символ для разделения нескольких ответов - " ~ ".
+
+Ответ может содержать следующие данные:
+%username% - имя отправителя;
+%support% - сумма на которую поддержал отправитель;
+%lvl% - уровень отправителя в чате;
+%game% - игра на канале;
+%uptime% - время трансляции;
+%lastfm% - играющий трек на Last.FM;
+%broadcast_title% - заголовок анонса;
+%broadcast_start% - время анонса;
+%vk% - статус Вконтакте</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="hide_in_autohelp" xml:space="preserve">
+    <value>Скрыть в !help</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="icon_cmd" xml:space="preserve">
+    <value>Иконка в сообщение GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="ignore_registr" xml:space="preserve">
+    <value>Игнорировать регистр</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="offline_cmd" xml:space="preserve">
+    <value>Сообщение когда стрим выключен</value>
+    <comment>settings</comment>
+  </data>
+  <data name="sleep_cmd" xml:space="preserve">
+    <value>Сообщение при вкл./выкл. сна</value>
+    <comment>settings</comment>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Принять</value>
+    <comment>app</comment>
+  </data>
+  <data name="only_assistant" xml:space="preserve">
+    <value>Помощники</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_premium" xml:space="preserve">
+    <value>Премиумы</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_streamer" xml:space="preserve">
+    <value>Cтримеры</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Пароль</value>
+    <comment>app</comment>
+  </data>
+  <data name="question_clean" xml:space="preserve">
+    <value>Вы действительно хотите очистить список объектов?</value>
+    <comment>question</comment>
+  </data>
+  <data name="question_default" xml:space="preserve">
+    <value>Вы действительно хотите установить значение по умолчанию?</value>
+    <comment>question</comment>
+  </data>
+  <data name="question_delete" xml:space="preserve">
+    <value>Вы действительно хотите удалить выбранный объект?</value>
+    <comment>question</comment>
+  </data>
+  <data name="regex_net" xml:space="preserve">
+    <value>Regex .Net</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="send_in_pm" xml:space="preserve">
+    <value>Отправлять в ЛС</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Настройки</value>
+    <comment>app</comment>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Изменить</value>
+    <comment>main</comment>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Имя пользователя</value>
+    <comment>app</comment>
+  </data>
+  <data name="clear_commands" xml:space="preserve">
+    <value>Очистить все команды</value>
+    <comment>menu</comment>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Команда*</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="default_help" xml:space="preserve">
+    <value>Доступные команды:</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_icon" xml:space="preserve">
+    <value>3</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_offline" xml:space="preserve">
+    <value>Выключен.</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_sleep" xml:space="preserve">
+    <value>Сон - это удовольствие</value>
+    <comment>default</comment>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Выход</value>
+    <comment>app</comment>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Сменить пользователя</value>
+    <comment>app</comment>
+  </data>
+  <data name="menu" xml:space="preserve">
+    <value>Меню</value>
+    <comment>menu</comment>
+  </data>
+  <data name="citations" xml:space="preserve">
+    <value>Цитировать</value>
+    <comment>settings</comment>
+  </data>
+  <data name="hello_follower" xml:space="preserve">
+    <value>Приветствовать подписчиков</value>
+    <comment>settings</comment>
+  </data>
+  <data name="vote_media" xml:space="preserve">
+    <value>Медиа голосования</value>
+    <comment>menu</comment>
+  </data>
+  <data name="not_required" xml:space="preserve">
+    <value>Не требуется</value>
+    <comment>app</comment>
+  </data>
+  <data name="response" xml:space="preserve">
+    <value>Ответ</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="response_file" xml:space="preserve">
+    <value>Ответ из файла</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="save_all" xml:space="preserve">
+    <value>Сохранить все</value>
+    <comment>menu</comment>
+  </data>
+  <data name="save_file" xml:space="preserve">
+    <value>Сохранить в файл</value>
+    <comment>app</comment>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Поиск:</value>
+    <comment>menu</comment>
+  </data>
+  <data name="sys_logs" xml:space="preserve">
+    <value>Системный лог</value>
+    <comment>app</comment>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>Время</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_channel" xml:space="preserve">
+    <value>Возможные варианты ввода:
+Miker - имя канала;
+#612 - id канала;
+#r12 - id комнаты;
+$1535 - id турнира.</value>
+    <comment>login</comment>
+  </data>
+  <data name="reset_lang" xml:space="preserve">
+    <value>Сбросить язык</value>
+    <comment>menu</comment>
+  </data>
+  <data name="hello_premium" xml:space="preserve">
+    <value>Приветствовать премиумов </value>
+    <comment>settings</comment>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Описание</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_pm" xml:space="preserve">
+    <value>Отвечать на команду !help в ЛС</value>
+    <comment>settings</comment>
+  </data>
+  <data name="show_descritions" xml:space="preserve">
+    <value>Показывать описания</value>
+    <comment>app</comment>
+  </data>
+  <data name="show_names" xml:space="preserve">
+    <value>Показывать имена</value>
+    <comment>app</comment>
+  </data>
+  <data name="last_update" xml:space="preserve">
+    <value>Последнее обновление</value>
+    <comment>app</comment>
+  </data>
+  <data name="unknown" xml:space="preserve">
+    <value>Неизвестный</value>
+    <comment>app</comment>
+  </data>
+  <data name="default_welcome_followers_text" xml:space="preserve">
+    <value>Приветствуем новых подписчиков</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_welcome_subscribers_text" xml:space="preserve">
+    <value>Поприветствуем нового премиум подписчика</value>
+    <comment>default</comment>
+  </data>
+  <data name="lastfm_get" xml:space="preserve">
+    <value>Получать трек на last.fm</value>
+    <comment>settings</comment>
+  </data>
+  <data name="lastfm_text" xml:space="preserve">
+    <value>Аккаунт last.fm</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_followers" xml:space="preserve">
+    <value>Приветствовать новых подписчиков GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_followers_text" xml:space="preserve">
+    <value>Текст в приветствие новых подписчиков</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_subscribers" xml:space="preserve">
+    <value>Приветствовать премиумов GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_subscribers_text" xml:space="preserve">
+    <value>Текст в приветствие новых премиумов</value>
+    <comment>settings</comment>
+  </data>
+  <data name="chance_random_quotes" xml:space="preserve">
+    <value>Шанс случайных цитат (250 = 25%)</value>
+    <comment>settings</comment>
+  </data>
+  <data name="file_random_quotes" xml:space="preserve">
+    <value>Файл со случаными цитатами</value>
+    <comment>settings</comment>
+  </data>
+  <data name="random_quotes" xml:space="preserve">
+    <value>Случайные цитаты</value>
+    <comment>settings</comment>
+  </data>
+  <data name="remove_links" xml:space="preserve">
+    <value>Удалять ссылки от пользователей (0)</value>
+    <comment>settings</comment>
+  </data>
+  <data name="reset_lang_help" xml:space="preserve">
+    <value>Язык изменится после перезагрузки</value>
+    <comment>menu</comment>
+  </data>
+  <data name="notifi_list_not_selected" xml:space="preserve">
+    <value>Объект в списке не выбран</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="notifi_list_bottom" xml:space="preserve">
+    <value>Объект уже самый последний или не выбрана</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="notifi_list_top" xml:space="preserve">
+    <value>Объект уже самый первый или не выбран</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="insert" xml:space="preserve">
+    <value>Вставить</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_users" xml:space="preserve">
+    <value>Пользователи</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="permissions" xml:space="preserve">
+    <value>Разрешения</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="dfi_game" xml:space="preserve">
+    <value>Игра на канале</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_lastfm" xml:space="preserve">
+    <value>Last.FM</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_uptime" xml:space="preserve">
+    <value>Время трансляции</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_username" xml:space="preserve">
+    <value>Ник пользователя</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_vk" xml:space="preserve">
+    <value>Вконтакте</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="ed_alerts" xml:space="preserve">
+    <value>Оповещения</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_commands" xml:space="preserve">
+    <value>Команды</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_labels" xml:space="preserve">
+    <value>Заметки</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_quests" xml:space="preserve">
+    <value>Задания</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_spells" xml:space="preserve">
+    <value>Заклинания</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="now_close_window" xml:space="preserve">
+    <value>Закрыть окно</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_exit_app" xml:space="preserve">
+    <value>Выйти из приложения</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_favorites_goodgame" xml:space="preserve">
+    <value>Смотреть сейчас любимые каналы на GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_favorites_twitch" xml:space="preserve">
+    <value>Смотреть сейчас любимые каналы на Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_games_goodgame" xml:space="preserve">
+    <value>Смотреть сейчас топ игры на GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_games_twitch" xml:space="preserve">
+    <value>Смотреть сейчас топ игры на Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_refresh_page" xml:space="preserve">
+    <value>Обновить текущую страницу</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_swap_to_main" xml:space="preserve">
+    <value>Перейти на главное окно приложение</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_top_goodgame" xml:space="preserve">
+    <value>Смотреть сейчас лучшие каналы на GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_top_twitch" xml:space="preserve">
+    <value>Смотреть сейчас лучшие каналы на Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="quest_chance" xml:space="preserve">
+    <value>Шанс подск.</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_description" xml:space="preserve">
+    <value>Описание задания</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_hint" xml:space="preserve">
+    <value>Подсказка при неверном ответе</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_name" xml:space="preserve">
+    <value>Секретное название</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_response" xml:space="preserve">
+    <value>Ответ для задания</value>
+    <comment>quest</comment>
+  </data>
+  <data name="chats" xml:space="preserve">
+    <value>Чаты</value>
+    <comment>menu</comment>
+  </data>
+  <data name="accounts" xml:space="preserve">
+    <value>Аккаунты</value>
+    <comment>menu</comment>
+  </data>
+  <data name="authorize" xml:space="preserve">
+    <value>Пройдите авторизация в браузере и введите полученный в конце код</value>
+    <comment>key</comment>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Помощь</value>
+    <comment>app</comment>
+  </data>
+  <data name="dfi_random_username" xml:space="preserve">
+    <value>Случайный ник</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="bot_accounts" xml:space="preserve">
+    <value>Встроенные бот аккаунты (нужен перезапуск чата)</value>
+    <comment>settings</comment>
+  </data>
+  <data name="bot_gg" xml:space="preserve">
+    <value>Использовать для GoodGame</value>
+    <comment>settings</comment>
+  </data>
+  <data name="bot_twitch" xml:space="preserve">
+    <value>Использовать для Twitch</value>
+    <comment>settings</comment>
+  </data>
+  <data name="dfi_separator" xml:space="preserve">
+    <value>Символ для разделения ответов</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="label_count" xml:space="preserve">
+    <value>Кол-во элементов</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_description" xml:space="preserve">
+    <value>Описание</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_element" xml:space="preserve">
+    <value>Элемент</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_label" xml:space="preserve">
+    <value>Заметка</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_name" xml:space="preserve">
+    <value>Имя*</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_time" xml:space="preserve">
+    <value>Период времени</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_type" xml:space="preserve">
+    <value>Тип</value>
+    <comment>label</comment>
+  </data>
+  <data name="start_page" xml:space="preserve">
+    <value>Стартовая страница</value>
+    <comment>watch_now</comment>
+  </data>
+  <data name="notify" xml:space="preserve">
+    <value>Уведомление о начале избранных</value>
+    <comment>watch_now</comment>
+  </data>
+  <data name="amount" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="elements" xml:space="preserve">
+    <value>Элементы</value>
+  </data>
+  <data name="notifi_required_fields" xml:space="preserve">
+    <value>Не все обязательные поля заполнены.</value>
+  </data>
+  <data name="required_fields" xml:space="preserve">
+    <value>* - обязательные поля</value>
+  </data>
+  <data name="label_list" xml:space="preserve">
+    <value>Отображать элементы списоком</value>
+    <comment>label</comment>
+  </data>
+</root>

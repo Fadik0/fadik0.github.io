@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title>Twitch Now</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<style>  
+			body {
+				margin: 0px;
+				width: 350px;
+				font-family: 'Open Sans', sans-serif;
+				color: #b8d5ff;	
+				background-color: #0D1221;
+			}
+			.channel { 
+				margin-top: 5px;
+				padding: 5px;						
+			}
+			.channel:hover { 
+				background-color: #0D1528;			
+			}
+			.channel > a {
+				text-decoration: none;
+				outline:none;
+				font-family: 'Open Sans', sans-serif;
+				color: #b8d5ff;	
+			}		
+			.channel-thumb > img { 
+				width: 85px;
+				height: 50px;
+				float: left;
+				border: none;
+			}		
+			.channel-streamer { 
+				font-size: 15px;
+				font-weight: 700;
+				overflow: hidden;
+				padding-left: 5px;
+				cursor: pointer;
+			}
+			.channel-title { 				
+				font-size: 11px;
+				font-weight: 600;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				max-width: 270px;
+				padding-left: 5px;
+				cursor: pointer;
+			}
+			.channel-game { 
+				font-size: 11px;
+				font-weight: 600;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				padding-left: 5px;
+				cursor: pointer;
+			}
+			
+			.more { 
+				font-size: 16px;
+				font-weight:800;
+				text-align: center;
+				height: 40px;	
+				padding-top: 20px;
+				cursor: pointer;
+				display: none;
+			}
+			.more:hover { 
+				background-color: #0D1528;			
+			}
+			
+			.title { 
+				position: fixed;
+				left: 0px;
+				top: 0%;
+				background: #233056;
+				width: 30px;
+				height: 20px;
+				padding: 3px;
+				text-align: center;
+				margin-left: 300px;	
+				border-radius: 0 0 5px 5px;
+                behavior: url(border-radius.htc);
+			}
+			.streams { 
+	
+			}
+		</style>
+	</head>
+	<body>	
+		<div class="title">		
+            <img src="http://www.twitch.tv/favicon.ico">
+		</div>
+		<div class="streams">		
+			
+		</div>
+		<div class="more">
+			Load More...
+		</div>
+		<script type="text/javascript">					
+		$(document).ready(function()
+		{															
+			jQuery.support.cors = true;
+			var _total = 0;						
+			var url = 'https://api.twitch.tv/kraken/streams/followed' + '?r' + Math.random();
+			if($(location).attr('search').indexOf('token=') > -1)
+			{
+			    url += '&oauth_token=' + $(location).attr('search').split('=')[1];
+			}
+			$.getJSON(url, function(data) {
+				if (data.streams)
+				{																								
+					_total = data._total;
+					var count = 25;
+					if (_total <= 25)
+						count = _total;
+					else
+						$( ".more" ).css("display", "block");
+					for (var i = 0; i < count; i++) {	
+						_total--; 
+						$(".streams").append('<div class="channel"><a href="' + data.streams[i].channel.url + '"><div class="info"><div class="channel-thumb"><img src="'+ data.streams[i].preview.medium +'"></div><div class="channel-streamer">' + data.streams[i].channel.display_name + '</div><div class="channel-game">' + data.streams[i].channel.game + ' - ' + data.streams[i].viewers + '</div><div class="channel-title">' + data.streams[i].channel.status + '</div></div></a></div>');				
+					}
+					url = data._links.next;
+				}					
+			});	
+
+			$( ".more" ).click(function() {
+				if($(location).attr('search').indexOf('token=') > -1)
+				{
+				    url += '&oauth_token=' + $(location).attr('search').split('=')[1];
+				}
+				$.getJSON( url , function(data) {			
+					if (data.streams)
+					{																		
+						var count = 25;
+						if (_total < 25)
+							count = _total
+						for (var i = 0; i < data.streams.length; i++) {	
+							_total--; 
+							$(".streams").append('<div class="channel"><a href="' + data.streams[i].channel.url + '"><div class="channel-thumb"><img src="'+ data.streams[i].preview.medium +'"></div><div class="channel-streamer">' + data.streams[i].channel.display_name + '</div><div class="channel-game">' + data.streams[i].channel.game + ' - ' + data.streams[i].viewers + '</div><div class="channel-title">' + data.streams[i].channel.status + '</div></a></div>');				
+						}
+						url = data._links.next;
+					}
+					if (_total < 1)
+						$( ".more" ).css("display", "none");					
+				});
+			});
+		});					
+		</script>		
+	</body>
+</html>

@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value>Add</value>
+    <comment>main</comment>
+  </data>
+  <data name="ban_user" xml:space="preserve">
+    <value>Ban user</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>app</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="citations_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\citations.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>main</comment>
+  </data>
+  <data name="del_message" xml:space="preserve">
+    <value>Delete message</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_regex_net" xml:space="preserve">
+    <value>Regular Expressions .NET Framework
+The regular expression pattern (Mr\.? |Mrs\.? |Miss |Ms\.? ) 
+matches any occurrence of "Mr ", "Mr. ", "Mrs ", "Mrs. ", "Miss ", "Ms or "Ms. "</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="hide_in_autohelp" xml:space="preserve">
+    <value>Hide in auto-help</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="ignore_registr" xml:space="preserve">
+    <value>Ignore registr</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ok</value>
+    <comment>app</comment>
+  </data>
+  <data name="only_assistant" xml:space="preserve">
+    <value>Assistants</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_premium" xml:space="preserve">
+    <value>Premiums</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_streamer" xml:space="preserve">
+    <value>Streamers</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Password</value>
+    <comment>app</comment>
+  </data>
+  <data name="regex_net" xml:space="preserve">
+    <value>Regex .Net</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="send_in_pm" xml:space="preserve">
+    <value>Send in pm</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Update</value>
+    <comment>main</comment>
+  </data>
+  <data name="username" xml:space="preserve">
+    <value>Username</value>
+    <comment>app</comment>
+  </data>
+  <data name="save_file" xml:space="preserve">
+    <value>Save to file</value>
+    <comment>app</comment>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Assistant Broadcasts</value>
+    <comment>app</comment>
+  </data>
+  <data name="default_" xml:space="preserve">
+    <value>Default</value>
+    <comment>app</comment>
+  </data>
+  <data name="help_cmd" xml:space="preserve">
+    <value>Text in auto-help</value>
+    <comment>settings</comment>
+  </data>
+  <data name="icon_cmd" xml:space="preserve">
+    <value>Icon message GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="offline_cmd" xml:space="preserve">
+    <value>Message when offline</value>
+    <comment>settings</comment>
+  </data>
+  <data name="sleep_cmd" xml:space="preserve">
+    <value>Message when on/off sleep</value>
+    <comment>settings</comment>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+    <comment>app</comment>
+  </data>
+  <data name="question_clean" xml:space="preserve">
+    <value>You are really want to clean list of objects?</value>
+    <comment>question</comment>
+  </data>
+  <data name="question_default" xml:space="preserve">
+    <value>You are really want to set default value?</value>
+    <comment>question</comment>
+  </data>
+  <data name="question_delete" xml:space="preserve">
+    <value>You are really want to delete object?</value>
+    <comment>question</comment>
+  </data>
+  <data name="question_ru_lang" xml:space="preserve">
+    <value>Enable the Russian language?</value>
+    <comment>question</comment>
+  </data>
+  <data name="clear_list" xml:space="preserve">
+    <value>Clear list</value>
+    <comment>menu</comment>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Command*</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="default_help" xml:space="preserve">
+    <value>Доступные команды:</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_icon" xml:space="preserve">
+    <value>3</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_offline" xml:space="preserve">
+    <value>Выключен.</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_sleep" xml:space="preserve">
+    <value>Sleep this pleasure.</value>
+    <comment>default</comment>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Exit</value>
+    <comment>app</comment>
+  </data>
+  <data name="logout" xml:space="preserve">
+    <value>Logout</value>
+    <comment>app</comment>
+  </data>
+  <data name="menu" xml:space="preserve">
+    <value>Menu</value>
+    <comment>menu</comment>
+  </data>
+  <data name="hello_follower" xml:space="preserve">
+    <value>Hello follower</value>
+    <comment>settings</comment>
+  </data>
+  <data name="lastfm" xml:space="preserve">
+    <value>LastFM</value>
+    <comment>svc</comment>
+  </data>
+  <data name="vote_media" xml:space="preserve">
+    <value>Media vote</value>
+    <comment>svc</comment>
+  </data>
+  <data name="not_required" xml:space="preserve">
+    <value>Not required</value>
+    <comment>app</comment>
+  </data>
+  <data name="response" xml:space="preserve">
+    <value>Response</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="response_file" xml:space="preserve">
+    <value>Response to file</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="save_all" xml:space="preserve">
+    <value>Save all</value>
+    <comment>menu</comment>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>Search:</value>
+    <comment>menu</comment>
+  </data>
+  <data name="sys_logs" xml:space="preserve">
+    <value>System logs</value>
+    <comment>app</comment>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>Time</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_channel" xml:space="preserve">
+    <value>Possible options for input:
+Miker - the name of the channel;
+#612 - id of channel;
+#r12 - id of room
+$1535 - id of cup.</value>
+    <comment>login</comment>
+  </data>
+  <data name="reset_lang" xml:space="preserve">
+    <value>Reset language</value>
+    <comment>menu</comment>
+  </data>
+  <data name="patches" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\patches.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="hello_premium" xml:space="preserve">
+    <value>Hello premium</value>
+    <comment>settings</comment>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="help_pm" xml:space="preserve">
+    <value>Respond to command !help in PM</value>
+    <comment>settings</comment>
+  </data>
+  <data name="show_descritions" xml:space="preserve">
+    <value>Show descriptions</value>
+    <comment>app</comment>
+  </data>
+  <data name="show_names" xml:space="preserve">
+    <value>Show names</value>
+    <comment>app</comment>
+  </data>
+  <data name="last_update" xml:space="preserve">
+    <value>Last update</value>
+    <comment>app</comment>
+  </data>
+  <data name="twitch" xml:space="preserve">
+    <value>Twitch</value>
+    <comment>svc</comment>
+  </data>
+  <data name="vkontakte" xml:space="preserve">
+    <value>VKontakte</value>
+    <comment>svc</comment>
+  </data>
+  <data name="unknown" xml:space="preserve">
+    <value>unknown</value>
+    <comment>app</comment>
+  </data>
+  <data name="default_welcome_followers_text" xml:space="preserve">
+    <value>Приветствуем новых подписчиков</value>
+    <comment>default</comment>
+  </data>
+  <data name="default_welcome_subscribers_text" xml:space="preserve">
+    <value>Поприветствуем нового премиум подписчика</value>
+    <comment>default</comment>
+  </data>
+  <data name="lastfm_get" xml:space="preserve">
+    <value>Getting audio track on last.fm</value>
+    <comment>settings</comment>
+  </data>
+  <data name="lastfm_text" xml:space="preserve">
+    <value>Account last.fm </value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_followers" xml:space="preserve">
+    <value>Welcome new followers GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_followers_text" xml:space="preserve">
+    <value>Text in greeting new followers</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_subscribers" xml:space="preserve">
+    <value>Welcome new subscribers GG</value>
+    <comment>settings</comment>
+  </data>
+  <data name="welcome_subscribers_text" xml:space="preserve">
+    <value>Text in greeting new subscribers</value>
+    <comment>settings</comment>
+  </data>
+  <data name="chance_random_quotes" xml:space="preserve">
+    <value>Chance random quotes (250 = 25%)</value>
+    <comment>settings</comment>
+  </data>
+  <data name="file_random_quotes" xml:space="preserve">
+    <value>File random quotes</value>
+    <comment>settings</comment>
+  </data>
+  <data name="random_quotes" xml:space="preserve">
+    <value>Random quotes</value>
+    <comment>settings</comment>
+  </data>
+  <data name="reset_lang_help" xml:space="preserve">
+    <value>Language changes after a reboot app</value>
+    <comment>menu</comment>
+  </data>
+  <data name="notifi_list_bottom" xml:space="preserve">
+    <value>Object is already at the bottom or is not selected</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="notifi_list_not_selected" xml:space="preserve">
+    <value>Object is not selected</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="notifi_list_top" xml:space="preserve">
+    <value>Object is already at the top or is not selected</value>
+    <comment>notifi</comment>
+  </data>
+  <data name="insert" xml:space="preserve">
+    <value>Insert</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="only_users" xml:space="preserve">
+    <value>Users</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="permissions" xml:space="preserve">
+    <value>Permissions</value>
+    <comment>cmd</comment>
+  </data>
+  <data name="dfi_game" xml:space="preserve">
+    <value>Game</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_lastfm" xml:space="preserve">
+    <value>Last.FM</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_uptime" xml:space="preserve">
+    <value>Uptime</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_username" xml:space="preserve">
+    <value>Username</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_vk" xml:space="preserve">
+    <value>VKontakte</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="ed_alerts" xml:space="preserve">
+    <value>Alerts</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_commands" xml:space="preserve">
+    <value>Commands</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_labels" xml:space="preserve">
+    <value>Labels</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_quests" xml:space="preserve">
+    <value>Quests</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ed_spells" xml:space="preserve">
+    <value>Spells</value>
+    <comment>cBox_editable_data</comment>
+  </data>
+  <data name="ic_close_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_close_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_exit_to_app_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_exit_to_app_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_launch_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_launch_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_refresh_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_refresh_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_info_outline_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_info_outline_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_favorite_goodgame_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_favorite_goodgame_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_favorite_twitch_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_favorite_twitch_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_star_goodgame_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_star_goodgame_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_star_twitch_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_star_twitch_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_videogame_asset_goodgame_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_videogame_asset_goodgame_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_videogame_asset_twitch_48dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_videogame_asset_twitch_48dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="now_close_window" xml:space="preserve">
+    <value>Close window</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_exit_app" xml:space="preserve">
+    <value>Exit the application</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_favorites_goodgame" xml:space="preserve">
+    <value>Watch now favorite channels on GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_favorites_twitch" xml:space="preserve">
+    <value>Watch now favorite channels on Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_games_goodgame" xml:space="preserve">
+    <value>Watch now top games on GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_games_twitch" xml:space="preserve">
+    <value>Watch now top games on Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_refresh_page" xml:space="preserve">
+    <value>Refresh the current page</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_swap_to_main" xml:space="preserve">
+    <value>Swap to main</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_top_goodgame" xml:space="preserve">
+    <value>Watch now top channels on GoodGame.RU</value>
+    <comment>now</comment>
+  </data>
+  <data name="now_top_twitch" xml:space="preserve">
+    <value>Watch now top channels on Twitch.TV</value>
+    <comment>now</comment>
+  </data>
+  <data name="ic_casino_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_casino_black_18dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quest_chance" xml:space="preserve">
+    <value>Chance hint</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_description" xml:space="preserve">
+    <value>Quest description</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_hint" xml:space="preserve">
+    <value>Hint when the wrong response</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_name" xml:space="preserve">
+    <value>Secret name</value>
+    <comment>quest</comment>
+  </data>
+  <data name="quest_response" xml:space="preserve">
+    <value>Quest response</value>
+    <comment>quest</comment>
+  </data>
+  <data name="goodgame_favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goodgame-favorite.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="goodgame_games" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goodgame-games.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="goodgame_now" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\goodgame-now.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="twitch_games" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitch-games.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="twitch_now" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitch-now.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="id_channel_vidi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id_channel_vidi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitch_favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitch_favorite.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="accounts" xml:space="preserve">
+    <value>Accounts</value>
+    <comment>menu</comment>
+  </data>
+  <data name="chats" xml:space="preserve">
+    <value>Chats</value>
+    <comment>menu</comment>
+  </data>
+  <data name="authorize" xml:space="preserve">
+    <value>Complete authorization in the browser and enter the resulting code at the end</value>
+    <comment>key</comment>
+  </data>
+  <data name="goodgame" xml:space="preserve">
+    <value>GoodGame</value>
+    <comment>svc</comment>
+  </data>
+  <data name="goodgame_bot" xml:space="preserve">
+    <value>GoodGame Bot</value>
+    <comment>svc</comment>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Help</value>
+    <comment>app</comment>
+  </data>
+  <data name="twitch_bot" xml:space="preserve">
+    <value>Twitch Bot</value>
+    <comment>svc</comment>
+  </data>
+  <data name="twitch_private" xml:space="preserve">
+    <value>Twitch Private</value>
+    <comment>svc</comment>
+  </data>
+  <data name="vidi" xml:space="preserve">
+    <value>Vidi</value>
+    <comment>svc</comment>
+  </data>
+  <data name="ic_arrow_downward_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_arrow_downward_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_arrow_upward_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_arrow_upward_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dfi_random_username" xml:space="preserve">
+    <value>Random Username</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="dfi_separator" xml:space="preserve">
+    <value>Char separator for responses</value>
+    <comment>cBox_data_for_insert</comment>
+  </data>
+  <data name="bot_accounts" xml:space="preserve">
+    <value>Embedded bot accounts (needs restart chat)</value>
+    <comment>settings</comment>
+  </data>
+  <data name="bot_gg" xml:space="preserve">
+    <value>Use for GoodGame</value>
+    <comment>settings</comment>
+  </data>
+  <data name="bot_twitch" xml:space="preserve">
+    <value>Use for Twitch</value>
+    <comment>settings</comment>
+  </data>
+  <data name="label_count" xml:space="preserve">
+    <value>Count elements</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_description" xml:space="preserve">
+    <value>Description*</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_element" xml:space="preserve">
+    <value>Element</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_label" xml:space="preserve">
+    <value>Label</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_name" xml:space="preserve">
+    <value>Name*</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_time" xml:space="preserve">
+    <value>Time period</value>
+    <comment>label</comment>
+  </data>
+  <data name="label_type" xml:space="preserve">
+    <value>Type</value>
+    <comment>label</comment>
+  </data>
+  <data name="start_page" xml:space="preserve">
+    <value>Start page</value>
+    <comment>watch_now</comment>
+  </data>
+  <data name="time_30day" xml:space="preserve">
+    <value>30 day</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_all" xml:space="preserve">
+    <value>All</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_custom" xml:space="preserve">
+    <value>Custom</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_last" xml:space="preserve">
+    <value>Last</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_monthly" xml:space="preserve">
+    <value>Monthly</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_session" xml:space="preserve">
+    <value>Session</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="time_weekly" xml:space="preserve">
+    <value>Weekly</value>
+    <comment>cBoxTime</comment>
+  </data>
+  <data name="type_donate" xml:space="preserve">
+    <value>Donate</value>
+    <comment>cBoxType</comment>
+  </data>
+  <data name="type_donate_top" xml:space="preserve">
+    <value>Donate Top</value>
+    <comment>cBoxType</comment>
+  </data>
+  <data name="type_followers" xml:space="preserve">
+    <value>Followers</value>
+    <comment>cBoxType</comment>
+  </data>
+  <data name="type_subscride" xml:space="preserve">
+    <value>Subscribers</value>
+    <comment>cBoxType</comment>
+  </data>
+  <data name="twitch_code" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitch_code.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_commands" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\help_commands.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="help_labels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\help_labels.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="help_quests" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\help_quests.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="ic_description_black_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_description_black_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="notify" xml:space="preserve">
+    <value>Notice of beginning favorites</value>
+    <comment>watch_now</comment>
+  </data>
+  <data name="amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="elements" xml:space="preserve">
+    <value>Elements</value>
+  </data>
+  <data name="notifi_required_fields" xml:space="preserve">
+    <value>Not all required fields are filled.</value>
+  </data>
+  <data name="required_fields" xml:space="preserve">
+    <value>* - required fields</value>
+  </data>
+  <data name="label_list" xml:space="preserve">
+    <value>Show elements as list</value>
+    <comment>label</comment>
+  </data>
+</root>

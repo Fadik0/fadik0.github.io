@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<title>Twitch Now</title>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<style>  
+			body {
+				margin: 0px;
+				width: 350px;
+				font-family: 'Open Sans', sans-serif;
+				color: #b8d5ff;	
+				background-color: #0D1221;				
+			}			
+			a {
+				text-decoration: none;
+				outline: none;
+				font-family: 'Open Sans', sans-serif;
+				color: #b8d5ff;
+			}				
+			.game { 
+				display:inline-block;
+				width: 50%;
+				text-align: center;
+				padding-bottom: 15px;
+			}
+			.game:hover { 
+				background-color: #0D1528;			
+			}
+			.game-title { 
+				font-size: 15px;
+				font-weight: 700;
+				overflow: hidden;
+				white-space: nowrap;			
+				text-overflow: ellipsis;
+				max-width: 100%;
+			}
+			.game-streams { 
+				font-size: 11px;
+				font-weight: 600;
+			}
+			.game-viewers { 
+				font-size: 11px;
+				font-weight: 600;
+			}
+			.game-thumb > img { 
+				height: 120px;
+			}									
+			.more { 
+				font-size: 16px;
+				font-weight:800;
+				text-align: center;
+				height: 40px;	
+				padding-top: 20px;
+			}			
+			.more:hover { 
+				background-color: #0D1528;			
+			}	
+			
+		</style>
+	</head>
+	<body>	
+		<div class="games">		
+			
+		</div>
+		<div class="more">
+			Load More...
+		</div>
+		<script type="text/javascript">					
+		$(document).ready(function()
+		{															
+			jQuery.support.cors = true;
+			
+			var url = 'http://api2.goodgame.ru/games';
+			
+			$.getJSON( url + '?r' + Math.random() + Math.random(), function(data) {			
+				if (data._embedded.games)
+				{																			
+					for (var i = 0; i < data.top.length; i++) {															
+						$(".games").append('<div class="game"><a href="twitch-now.html?game=' + data.top[i].game.name + '"><div class="game-info"><div class="game-thumb"><img src="' + data.top[i].game.box.medium + '"></div><div class="game-title">' + data.top[i].game.name + '</div><div class="game-streams">Каналов: ' + data.top[i].channels + '</div><div class="game-viewers">Зрителей: ' + data.top[i].viewers + '</div></div></div></a>');					
+					}
+					url = data._links.next;
+				}
+				
+			});	
+
+			$( ".more" ).click(function() {
+				$.getJSON( url + '&r' + Math.random() + Math.random(), function(data) {			
+					if (data._embedded.games)
+					{																			
+						for (var i = 0; i < data.top.length; i++) {															
+							$(".games").append('<div class="game"><a href="twitch-now.html?game=' + data.top[i].game.name + '"><div class="game-info"><div class="game-thumb"><img src="' + data.top[i].game.box.medium + '"></div><div class="game-title">' + data.top[i].game.name + '</div><div class="game-streams">Каналов: ' + data.top[i].channels + '</div><div class="game-viewers">Зрителей: ' + data.top[i].viewers + '</div></div></div></a>');					
+						}
+						url = data._links.next;						
+					}							
+				});
+			});
+		});					
+		</script>		
+	</body>
+</html>
